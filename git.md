@@ -23,3 +23,35 @@ Dann muss man auf Github unter `Settings>SSH and GPG key` auf  *New Key* drücke
 
 Um Repositories dann zu klonen muss man ssh auswählen.
 
+
+
+## Files zu .gitignore hinzufügen
+
+1. File/Ordner zu `.gitignore` hinzufügen.
+
+2. Cache löschen
+
+   ```bash
+   # Cache für alle Files/Ordner
+   git rm -r --cached .
+   # Cache für spezifische Files/Ordner
+   git rm -r --cached <file_name.ext>
+   ```
+
+3. Andere Files/Ordner hinzufügen
+
+   ```bash
+   # Alle Files/Ordner
+   git add .
+   # spezifische Files/Ordner
+   git add <file_name.ext>
+   ```
+
+4. Commiten
+
+   ```bash
+   git commit -m "commit message"
+   ```
+
+   
+
