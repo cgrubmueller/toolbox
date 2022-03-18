@@ -35,6 +35,8 @@ Maxima kann man einfach über den Packagemanager herrunterladen
 
 ## weitere Programme
 
-Mit `snap` kann man sehr viele Programme herrunterladen.
+Mit `yay` kann man sehr viele Programme herrunterladen.
 
-*Teams, Spotify, Signal, Thunderbird, Typora, docker, flutter, etc.*
+*Signal, Thunderbird, Typora, docker, flutter, etc.*
+
+Mit `snap` kann man *Spotify* und *Teams* installieren.

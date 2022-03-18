@@ -4,9 +4,23 @@ Christian Grubmüller, 23.11.2021
 
 ## Installieren
 
+Sollte man eigentlich mit yay machen. `docker-compose` funktioniert beispielsweise nicht wenn man es über snap installiert.
+
 ```shell
 sudo snap install docker
 ```
+
+## Docker Daemon starten
+
+Bevor man Docker verwenden kann, muss man den Daemon starten. Man könnte ihn auch standardmäßig beim start des Computer laufen lassen, aber das ist nicht empfolen.
+
+```bash
+sudo systemctl start docker
+```
+
+
+
+
 
 ## Docker ohne sudo
 

@@ -1,12 +1,36 @@
 # Python
 
-Christian Grubmüller, 10.12.2021
+**Autor: **Christian Grubmüller
 
-## Alle packages deinstallieren
+**Datum:** 18.03.2022
+
+## Alle packages deinstallieren [^1]
 
 ```bash
-pip freeze | xargs pip uninstall -y
+# creates a virtualenv
+python3 -m venv venv
+
+# activates the virtualenv
+source venv/bin/activate
+
+# verify its working
+which python
+
+# freeze dependencies into requirements.txt
+pip3 freeze > requirements.txt
+
+# install all dependencies from requirements.txt
+pip3 install -r requirements.txt
+
+# delete all installed dependencies from venv / the environment
+pip3 freeze | xargs pip uninstall -y
+
+# list all installed dependencies
+pip3 list
 ```
 
 
 
+## Quellen
+
+[^1]: "virtualenv Cheatsheet" [online](https://aaronlelevier.github.io/virtualenv-cheatsheet/)

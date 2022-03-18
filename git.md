@@ -32,8 +32,10 @@ Um Repositories dann zu klonen muss man ssh auswählen.
 2. Cache löschen
 
    ```bash
-   # Cache für alle Files/Ordner
+   # Cache für alle Files
    git rm -r --cached .
+   # Cache für alle Ordner
+   git rm -r --cached . -r
    # Cache für spezifische Files/Ordner
    git rm -r --cached <file_name.ext>
    ```
