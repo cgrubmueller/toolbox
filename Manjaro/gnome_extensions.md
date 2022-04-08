@@ -6,6 +6,8 @@ Christian Grubmüller, 15.11.2021
 
 Generell kann man viele Extensions für Gnome verwenden. Am besten kann man diese mit https://extensions.gnome.org/ und der entsprechenden Browserextension herrunterladen/installieren. Offline kann man die gnome-extensions mit dem Programm *Extensions* verwalten.
 
+Wenn man die Extensions über Firefox herunterlädt muss man ein Programm im Packetmanager herunterladen. Das sollte man sofort nach dem installieren der extensions wieder deinstallieren, weil sonst wird Firefox extrem langsam!!!
+
 #### Enable
 
 ```bash

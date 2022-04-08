@@ -54,5 +54,43 @@ Eine SSH-Verbindung mit den VMs in Virtual Box herzustellen ist etwas komplizier
 
 ## VM untereindander verbinden
 
-Standardmäßig, können sich die VMs nicht mittels der IP-Adresse verbinden. Um das zu lösen, muss man 
+Standardmäßig, können sich die VMs nicht mittels der IP-Adresse verbinden. Um das zu lösen, muss man Virtual Network erstellen. Jeder VM, die sich damit verbinden muss, muss man ein neuen Netzwerkadapter hinzufügen und sie als *Host-only* mit dem richtigen Netzwerk konfigurieren.
 
+![image-20220408212625199](images/virtualbox/image-20220408212625199.png)
+
+### *IP fixen*
+
+Weil Virtualbox bei mir die selbe IP vergibt für mehrere VMs musste ich zuerst in Virtualbox ein Host Network erstellen und dann bei den einzelnen VMs habe ich dann einen zweiten Netzwerk Adapter hinzugefügt mit dem Typen Host-Only. 
+
+#### Temoräre Lösung
+
+*In den Vms habe ich das Interface hochgefahren und die IP mit dhcp gesetzt. Damit hat es funktioniert. Diese Lösung ist allerdings nur temporär.*
+
+```bash
+sudo ip link set enp0s8 up
+sudo dhclient enp0s8
+```
+
+#### Permanente Lösung
+
+ *Wenn man permanent eine IP-Adresse für die VM haben will, kann man die Konfugration im File `/etc/netplan/00-installer-config.yaml` machen.*
+
+```bash
+# This is the network config written by 'subiquity'
+network:
+  ethernets:
+    enp0s3:
+      dhcp4: true
+    enp0s8:
+      dhcp4: true
+      dhcp-identifier: mac # Für geklonte VMs.
+  version: 2
+```
+
+*Dann muss man den `netplan` "neustarten".* 
+
+```bash
+sudo netplan apply
+```
+
+Anschließend hat man eine IP.

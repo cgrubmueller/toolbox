@@ -2,14 +2,6 @@
 
 Christian Grubmüller, 21.11.2021
 
-## Intellij
-
-Intellij kann man mit *snap* herrunterladen.
-
-```bash
-sudo snap install intllij-idea-ultimate --classic
-```
-
 ## Astah
 
 Astah-uml hab ich mit dem Packagemanager herruntergeladen. Wichtig ist, dass Astah die Version 1.8 von Java benötigt. Am besten ladet man die auch im Packagemanager herrunter (*jdk8-openjdk*). Mit dem Befehl `archlinux-java` kann man seine Java Versionen managen und umändern.

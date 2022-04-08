@@ -4,7 +4,7 @@
 
 **Datum:** 18.03.2022
 
-## Alle packages deinstallieren [^1]
+## Nützliche Befehle [^1]
 
 ```bash
 # creates a virtualenv
@@ -12,6 +12,9 @@ python3 -m venv venv
 
 # activates the virtualenv
 source venv/bin/activate
+
+# deactivates the venv
+deactivate
 
 # verify its working
 which python
